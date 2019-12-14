@@ -15,13 +15,18 @@ a{
 ul li{
     list-style: none;
 }
+.cur{
+    /*border-bottom: none;*/
+    padding: 5px 12px!important;
+    color: rgb(68, 68, 68)!important;
+}
 /*导航头部样式*/
 #header{
     min-width: 1200px;
     display: flex;
     justify-content: space-around;
     height: 140px;
-    background: #ccc;
+    background: rgba(152, 222, 216,1);
 }
 #header .img{
     width:30%;
@@ -103,7 +108,7 @@ text-align: center;
 /*返回顶部*/
 #top{
     /*display: none;*/
-
+    cursor: pointer;
     position: fixed;
     right: 20px;
     bottom: 50px;
@@ -132,4 +137,29 @@ footer span{
 }
 footer div:last-child{
     font-size:18px;
+}
+/*电梯导航*/
+#sideBar{
+    display: none;
+    position: fixed;
+    width: 40px;
+    height: 200px;
+    background:RGBA(98, 98, 98,0.7);
+    top:200px;
+    left: 70px;
+}
+#sideBar ul{
+    width: inherit;
+    height: inherit;
+}
+#sideBar ul li{
+
+
+    width: inherit;
+    height: calc(100%/4);
+    text-align: center;
+    line-height:50px;
+}
+#sideBar a{
+    color:white;
 }

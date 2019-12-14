@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/login.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>登录页面</title>
+    <style>
+        #login{
+            position: relative;
+            /*width: 70%;*/
+            height: 523px;
+            background:url("img/bg/regBg.png");
+            background-repeat:no-repeat;
+            background-size:contain;
+            overflow: hidden;
+        }
+        #box{
+            font-family: 华文仿宋;
+            position: absolute;
+            right: 0;
+            width:30%;
+            background: rgb(255, 90, 129);
+            height: 100%;
+            font-size: 18px;
+            text-align: center;
+            padding-top:150px;
+
+        }
+        #box input{
+            width:180px;
+            height: 25px;
+            padding: 3px 5px;
+            border-radius:15px;
+            border:1px solid #ccc;
+            margin-top: 25px;
+            outline: 0;
+        }
+        #box button {
+            margin-top: 25px;
+            width: 80px;
+            height: 30px;
+            padding: 5px;
+            background-color:deepskyblue;
+            outline: 0;
+            border:0 ;
+            cursor: pointer;
+            color: white;
+            font-size: 15px;
+            border-radius: 5%;
+        }
+    </style>
+</head>
+<body>
+<header id="header">
+    <div class="img"></div>
+    <ul>
+        <li><a href="index.html" > 首页 </a></li>
+        <li><a href="">栏目 2 </a></li>
+        <li><a href="">栏目 3 </a></li>
+        <li><a href="">栏目 4 </a></li>
+        <li><a href="login.html" class="cur">登录 </a></li>
+        <li><a href="register.html" >注册 </a></li>
+    </ul>
+</header>
+<div id="login">
+    <div id="box">
+        用&nbsp;&nbsp;户&nbsp;&nbsp;名:<input type="text" id="user" placeholder="请输入一个大于4位用户名"><br>
+        密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:<input type="password" placeholder="输入大于6位密码" id="pwd"><br>
+        <button type="button" id="reg">登录</button>
+    </div>
+</div>
+<footer>
+    <div>本项目已开始于 <span>2019</span>年 <span>12</span>月 <span>12</span>日</div>
+    <div>已启动 <span id="day"></span>天 <span id="hours"></span>时 <span id="min"></span>分 <span id="sec"></span>秒</div>
+    <div>&copy; 2019-2020xx网商城 版权:新乡学院&nbsp;计算机与信息工程学院 2019软件工程(专升本)1 20194132043 李新浩所有</div>
+</footer>
+</body>
+</html>

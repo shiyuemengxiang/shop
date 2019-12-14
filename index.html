@@ -11,12 +11,12 @@
 <header id="header">
     <div class="img"></div>
     <ul>
-        <li><a href="">栏目 1 </a></li>
+        <li class="cur"><a href="" > 首页 </a></li>
         <li><a href="">栏目 2 </a></li>
         <li><a href="">栏目 3 </a></li>
         <li><a href="">栏目 4 </a></li>
-        <li><a href="">栏目 5 </a></li>
-        <li><a href="">栏目 6 </a></li>
+        <li><a href="login.html">登录 </a></li>
+        <li><a href="register.html">注册 </a></li>
     </ul>
 </header>
 <!--轮播开始-->
@@ -26,7 +26,7 @@
 </div>
 <!--内容区域-->
 <section>
-    <div class="content">
+    <div class="content" id="hot">
         <div class="title"><h2>今日热卖</h2></div>
         <ul>
             <li>
@@ -187,7 +187,7 @@
             </li>
         </ul>
     </div>
-    <div class="content">
+    <div class="content" id="nz">
         <div class="title"><h2>女装热卖</h2></div>
         <ul>
             <li>
@@ -257,7 +257,7 @@
         </ul>
 
     </div>
-    <div class="content">
+    <div class="content" id="wy">
         <div class="title"><h2>卫衣</h2></div>
         <ul>
             <li>
@@ -367,12 +367,16 @@
 </footer>
 <!--返回顶部-->
 <div id="top"></div>
-<!--轮播结束-->
-<script>
-    $(()=>{
-        // alert('上海市三')
-    })
-</script>
+<!--电梯导航-->
+<div id="sideBar">
+    <ul>
+        <li><a href="#hot">热卖</a></li>
+        <li><a href="#nz">女装</a></li>
+        <li><a href="#wy">卫衣</a></li>
+        <li><a href="#">TOP</a></li>
+    </ul>
+</div>
+<script src="js/logined.js"></script>
 <script src="js/index.js"></script>
 <script src="js/animate.js"></script>
 
