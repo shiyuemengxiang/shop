@@ -9,9 +9,11 @@
     font-family: "微软雅黑 Light";
 }
 a{
+    font-size: 16px;
     text-decoration: none;
 
 }
+
 ul li{
     list-style: none;
 }
@@ -20,19 +22,72 @@ ul li{
     padding: 5px 12px!important;
     color: rgb(68, 68, 68)!important;
 }
+/*顶部搜索*/
+.sear{
+    min-width: 1200px;
+}
+.search{
+    width:750px;
+    height:45px;
+    background:#ff0036;
+    margin:80px auto;
+}
+.search>input{
+    width:580px;
+    height:25px;
+    margin-bottom:10px;
+    margin-left:3px;
+    outline:none;
+    padding:3px;
+}
+.search>.searchBtn{
+    width:130px;
+    height:40px;
+    background:#ff0036;
+    border:none;
+    outline:none;
+    color:#fff;
+    font-size:20px;
+    font-weight: bold;
+}
+.searchbelow a{
+    color:#999;
+    margin:0 10px;
+}
+a:hover{
+    text-decoration: none;
+}
+.redcolor{
+    color:#ff0036 !important;
+}
+.sear{
+    /*position: relative;*/
+}
+.logo{
+    margin-left: 35px;
+    margin-right: 20px;
+    position: absolute;
+    left:80px;
+    top:40px;
+
+}
+/*搜索结束*/
 /*导航头部样式*/
 #header{
-    min-width: 1200px;
+    z-index: 99;
+    margin-bottom: 20px;
+    background-color: #fff;
+    min-width: 100%;
     display: flex;
     justify-content: space-around;
-    height: 140px;
-    background: rgba(152, 222, 216,1);
+    height: 40px;
+    border-bottom:3px solid rgba(246, 45, 72);
 }
-#header .img{
-    width:30%;
-    position: relative;
-    top:10%
-}
+/*#header .img{*/
+    /*width:30%;*/
+    /*position: relative;*/
+    /*top:10%*/
+/*}*/
 #header ul{
     width: 70%;
     display: flex;
@@ -51,12 +106,46 @@ ul li{
     /*border-bottom: 5px solid darkred;*/
     /*padding: 5px 18px;*/
 }
-/*banner布局*/
+#header ul li:nth-child(2) a{
+    color: orange;
+}
+#header ul li:nth-child(3) a{
+    color: deeppink;
+}
+#header ul li:nth-child(4) a{
+    color: rgb(6, 180, 102);
+}
+/*隐藏二级菜单*/
+#header li ul{
+    z-index: 99;
+    position: absolute;
+    width: 80px;
+    height: auto;
+    padding:5px;
+    text-align: center;
+    background: white;
+    display: none;
+}
+#header li:hover ul{
+    display: block;
+}
+#header li ul li{
+    padding: 5px;
+}
+#header li ul li:hover{
+    border-bottom:5px solid red;
+    padding:5px 12px;
+    color: rgba(185, 36, 102,0.8);
+}
+#header li{
+    position: relative;
+}
+
+    /*banner布局*/
 .banner {
     width: 1200px;
     height: 535px;
-    margin: 50px auto;
-    border: 5px solid deeppink;
+    margin: 0px auto;
     position: relative;
 }
 .all {

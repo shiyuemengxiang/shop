@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/logined.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/animate.js"></script>
+</head>
+<body>
+
+<!--<div class="sear">-->
+
+    <!--<div class="search">-->
+        <!--<div class="logo"><img src="logo.png" alt="" width="290" height="130" /></div>-->
+        <!--<input type="text" placeholder="搜索 天猫 商品/品牌/店铺"/><button type="submit" class="searchBtn">搜索</button>-->
+        <!--&lt;!&ndash;搜索框下面的推荐搜索&ndash;&gt;-->
+        <!--<div class="searchbelow">-->
+            <!--<span><a href="" class="redcolor"> 针织衫 </a><span>|</span></span>-->
+            <!--<span><a href=""> 羽绒服</a><span>|</span></span>-->
+            <!--<span><a href=""> 四件套 </a><span>|</span></span>-->
+            <!--<span><a href="" class="redcolor"> 电动牙刷 </a><span>|</span></span>-->
+            <!--<span><a href=""> 客厅灯 </a><span>|</span></span>-->
+            <!--<span><a href=""> 口红 </a><span>|</span></span>-->
+            <!--<span><a href="" class="redcolor"> 手机 </a><span>|</span></span>-->
+            <!--<span><a href=""> 运动鞋 </a><span>|</span></span>-->
+            <!--<span><a href="" class="redcolor"> 牛奶 </a></span>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<header id="header">
+    <!--<div class="img"></div>-->
+    <ul>
+        <li class="cur alone"><a href="" > 首页 </a></li>
+        <li ><a href="">男装 </a>
+            <ul>
+                <li><a href="">男装1</a></li>
+                <li><a href="">男装2</a></li>
+                <li><a href="">男装3</a></li>
+            </ul>
+        </li>
+        <li><a href="">女装</a>
+            <ul>
+                <li><a href="">女装1</a></li>
+                <li><a href="">女装2</a></li>
+                <li><a href="">女装3</a></li>
+            </ul>
+        </li>
+        <li><a href="">冬季热卖</a>
+            <ul>
+                <li><a href="">热卖1</a></li>
+                <li><a href="">热卖2</a></li>
+            </ul>
+        </li>
+        <li id="login" class="alone"><a href="login.html">登录 </a></li>
+        <li id="reg" class="alone"><a href="register.html">注册 </a></li>
+    </ul>
+</header>
+
+<h1>this is goods1 pages!</h1>
+<div id="msg"></div>
+<script>
+   $(()=>{
+       let url=location.href;
+       let index;
+       let id;
+       if(url.indexOf('id')!=-1){
+           index=url.indexOf('id')+3
+           id=url.substr(index)
+       }else{
+           id=0
+       }
+
+       $('#msg').html("id="+id+"页面")
+   })
+</script>
+</body>
+</html>

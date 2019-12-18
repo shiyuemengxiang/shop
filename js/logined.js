@@ -11,11 +11,11 @@ $(()=>{
     $(window).load(()=>{
         $(()=>{
             if(localStorage.user){
-                $('#header ul li').eq(4).html("欢迎:"+localStorage.user)
-                $('#header ul li').eq(5).html('')
+                $('#login').html("欢迎:"+localStorage.user)
+                $('#reg').html('')
             }else{
-                $('#header ul li').eq(4).html('<a href="login.html">登录 </a>')
-                $('#header ul li').eq(5).html('<a href="register.html">注册 </a>')
+                $('#login').html('<a href="login.html">登录 </a>')
+                $('#reg').html('<a href="register.html">注册 </a>')
 
             }
         })

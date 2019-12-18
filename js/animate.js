@@ -9,13 +9,25 @@
  */
 // js动画控制
 $(()=>{
-    $('#header ul li a').hover(function () {
+    $('#header ul>.alone').hover(function () {
         $(this).css({'border-bottom':'5px solid red','padding':'5px 12px','color':'red'})
+        // $(this).find('ul').fadeIn()
     },function(){
         $(this).css({'border-bottom':'none','color':'#444'})
     })
+    $('#header ul>li').hover(function () {
+        $(this).find('ul').fadeIn(500)
+    },function(){
+        $(this).find('ul').fadeOut(500)
+    })
     $(window).scroll(function(){
         var LXH_TOP=$(window).scrollTop()
+        if(LXH_TOP>200){
+            $("#header").css({"position":"fixed","top":"0px",})
+        }else{
+            $("#header").css({"position":"static"})
+        }
+        console.log(LXH_TOP)
             if(LXH_TOP<300){
             $('#sideBar').fadeOut()
             }else{
