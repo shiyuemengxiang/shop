@@ -45,5 +45,15 @@ $(()=>{
         //女装2260px-3859px
         //3860px+卫衣
     })
+    $(function(){
+        $(".content ul li").mouseover(function () {
+            $(this).css({"border":"1px solid rgb(246, 45, 72)"})
+            $(this).find("img").css("width","400px")
+        })
+        $(".content ul li").mouseout(function () {
+            $(this).css({"border":"none"})
+            $(this).find("img").css("width","350")
+        })
 
+    })
 })

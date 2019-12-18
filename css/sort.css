@@ -1,0 +1,42 @@
+*{
+    padding:0 ;
+    margin: 0;
+}
+#sort{
+    min-width: 1200px;
+    height: 500px;
+    background: #fff;
+    border: 2px solid deepskyblue;
+}
+#sort .top{
+    width: 1200px;
+    line-height: 50px;
+    /*height: 50px;*/
+    padding: 5px 8px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+#sort .top input{
+    width: 180px;
+    height: 18px;
+    /*height: 20px;*/
+    /*margin-top: 3px;*/
+    /*float: left;*/
+    /*display: block;*/
+    border: 1px solid #ccc;
+
+    cursor: pointer;
+    background: url("../img/bg/spirit.png") 0 -372px  no-repeat;
+}
+.tag{
+    width: 1200px;
+    height: 140px;
+}
+.tag ul{
+    margin:5px 8px;
+}
+.tag ul span{
+    margin-left: 5px;
+    cursor: pointer;
+}
