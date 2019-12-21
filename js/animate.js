@@ -9,11 +9,11 @@
  */
 // js动画控制
 $(()=>{
-    $('#header ul>.alone').hover(function () {
-        $(this).css({'border-bottom':'5px solid red','padding':'5px 12px','color':'red'})
+    $('#header ul li').hover(function () {
+        $(this).css({'border-bottom':'5px solid red','background':'rgba(0,0,0,0.1)','color':'red'})
         // $(this).find('ul').fadeIn()
     },function(){
-        $(this).css({'border-bottom':'none','color':'#444'})
+        $(this).css({'border-bottom':'none','background':'none','color':'#444'})
     })
     $('#header ul>li').hover(function () {
         $(this).find('ul').fadeIn(500)
@@ -33,9 +33,9 @@ $(()=>{
             }else{
                 $('#sideBar').fadeIn()
             }
-            if(LXH_TOP>=580&&LXH_TOP<1659){
+            if(LXH_TOP>=580&&LXH_TOP<1634){
                     $('#sideBar ul li').eq(0).css('background-color','deeppink').siblings('li').css('background-color','RGBA(98, 98, 98,0.7)')
-            }else if(LXH_TOP>=1600&&LXH_TOP<3150){
+            }else if(LXH_TOP>=1635&&LXH_TOP<3150){
                 $('#sideBar ul li').eq(1).css('background-color','rgb(102, 217, 239)').siblings('li').css('background-color','RGBA(98, 98, 98,0.7)')
 
             }else if(LXH_TOP>=3151){

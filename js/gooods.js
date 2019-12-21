@@ -226,43 +226,43 @@
             "female": [
                 {
                     "id": "21",
-                    "url": "mg/goods/female1.jpg",
+                    "url": "img/goods/female1.jpg",
                     "price": "89",
                     "tag": "秋季韩版甜美修身气质高腰百褶针织连衣裙中长款显廋长袖打底裙子"
                 },
                 {
                     "id": "22",
-                    "url": "mg/goods/female2.jpg",
+                    "url": "img/goods/female2.jpg",
                     "price": "49",
                     "tag": "百褶裙女秋冬季新款高腰a字裙网纱半身裙ins超火的仙女长裙子"
                 },
                 {
                     "id": "23",
-                    "url": "mg/goods/female3.jpg",
+                    "url": "img/goods/female3.jpg",
                     "price": "59.9",
                     "tag": "2019韩版冬新款女装圆领宽松显瘦中长款拼接毛衣连衣裙冬季"
                 },
                 {
                     "id": "24",
-                    "url": "mg/goods/female4.jpg",
+                    "url": "img/goods/female4.jpg",
                     "price": "49.9",
                     "tag": "黑色半身裙女秋冬中长款高腰显瘦a字裙松紧腰秋季网纱百褶长裙子"
                 },
                 {
                     "id": "25",
-                    "url": "mg/goods/female5.jpg",
+                    "url": "img/goods/female5.jpg",
                     "price": "39",
                     "tag": "针织半身裙女秋冬季新款高腰中长款百搭显瘦黑色开叉一步裙子"
                 },
                 {
                     "id": "26",
-                    "url": "mg/goods/female6.jpg",
+                    "url": "img/goods/female6.jpg",
                     "price": "43",
                     "tag": "百褶裙女秋冬季2019新款中长款百搭高腰黑色a字半身裙长裙子"
                 },
                 {
                     "id": "27",
-                    "url": "mg/goods/female7.jpg",
+                    "url": "img/goods/female7.jpg",
                     "price": "103",
                     "tag": "早春韩版学院风宽松小翻领百褶连衣裙显廋小个子假两件a字卫衣裙"
                 }

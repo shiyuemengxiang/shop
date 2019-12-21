@@ -1,0 +1,100 @@
+#rank{
+    width:1200px;
+    height:auto;
+    border:3px solid deepskyblue;
+    margin: 0 auto;
+}
+.title{
+    width:inherit;
+    height:66px;
+    background-color:rgb(95, 103, 116);
+    position: relative;
+}
+.title ul{
+    position: absolute;
+    right: 50px;
+}
+.title ul li{
+    float: left;
+    margin:0 30px;
+    padding:22px 30px;
+}
+.title li a{
+    color:#fff;
+}
+/*排行榜*/
+.box_title{
+    width:1200px;
+    height:60px;
+    border:2px solid red;
+    border-radius:50px;
+    position: relative;
+}
+.box_title .desc{
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    width: 400px;
+    height:55px;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 42px;
+    font-weight: 500;
+    font-family:  -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    word-spacing: 50px;
+}
+.box_goods ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.box_goods ul li{
+    display: flex;
+    padding: 20px;
+    width:calc(100%/3);
+}
+.box_goods ul li .l{
+    position: relative;
+}
+.box_goods ul li .l img{
+    margin: 0px 20px;
+    width: 200px;
+}
+.box_goods ul li .l i{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("../img/bg/first.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 5px;
+    left:20px;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    font-style:normal;
+}
+.box_goods ul li .r{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+
+}
+/*排行榜各项*/
+li .r div{
+ font-size: 20px;
+    color: deeppink;
+    font-weight:500;
+    margin-left: 20px;
+}
+li .r span{
+    color: #444444;
+    font-size: 14px;
+    margin-right: 20px;
+}

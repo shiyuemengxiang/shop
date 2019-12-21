@@ -13,15 +13,18 @@ a{
     text-decoration: none;
 
 }
-
-ul li{
+li{
     list-style: none;
 }
-.cur{
-    /*border-bottom: none;*/
-    padding: 5px 12px!important;
-    color: rgb(68, 68, 68)!important;
+#header ul li{
+    list-style: none;
+    padding: 10px 20px;
 }
+/*.cur{*/
+    /*!*border-bottom: none;*!*/
+    /*padding: 5px 12px!important;*/
+    /*color: rgb(68, 68, 68)!important;*/
+/*}*/
 /*顶部搜索*/
 .sear{
     min-width: 1200px;
@@ -124,6 +127,8 @@ a:hover{
     padding:5px;
     text-align: center;
     background: white;
+    margin-top:10px;
+    margin-left: -25px;
     display: none;
 }
 #header li:hover ul{
