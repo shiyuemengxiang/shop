@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车结算</title>
+		<link rel="stylesheet" href="css/carList.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/jquery.js"></script>
+	</head>
+	<body>
+    <!--头部开始-->
+    <header id="header">
+        <ul>
+            <li class="cur alone"><a href="index.html"> 首页 </a></li>
+            <li><a href="sort_male.html">男装 </a>
+                <ul>
+                    <li><a href="sort_male_top.html">上衣</a></li>
+                    <li><a href="sort_male_bottom.html">下衣</a></li>
+                </ul>
+            </li>
+            <li><a href="sort_female.html">女装</a>
+            </li>
+            <li><a href="hot.html">热卖榜</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li id="login" class="alone"><a href="login.html">登录 </a></li>
+            <li id="reg" class="alone"><a href="register.html">注册 </a></li>
+        </ul>
+    </header>
+    <!--购物车-->
+    <div id="con">
+        <div class="head">
+            <div class="img"><img src="img/bg/logo1.png" alt="" width="150"height="150"></div>
+
+            <!--<img src="./img/logo1.png" alt="" />-->
+            <button class="btn" onclick="gb()">关闭</button>
+        </div>
+        <!--购物车标题-->
+        <div class="content">
+                <div class="cart-thead">
+                <!-- 我的冰箱 -->
+                <div class="column t-checkbox">
+                    <div class="cart-checkbox">
+                        <input type="checkbox" id="check1" checked="checked"	 name="toggle-checkboxes" class="jdcheckbox" clstag="clickcart|keycount|xincart|cart_allCheck">
+                        <!--<label for="">勾选全部商品</label>-->
+                        全选
+                    </div>
+                    <!--全选-->
+                </div>
+                <div class="column t-goods" style="width:300px;text-align: center">商品</div>
+                <div class="column t-props" style="width:100px;"></div>
+                <div class="column t-price" style="width:50px;">单价</div>
+                <div class="column t-quantity" style="width:50px;">数量</div>
+                <div class="column t-sum" style="width:50px;">小计</div>
+                <div class="column t-action" style="width:50px;">操作</div>
+            </div>
+            <div class="shop_tag">
+                <input type="checkbox"   checked="checked"/> <button class="tag">自营专区</button>
+            </div>
+            <div class="settlement" >
+                <div class="count_num">已选择<span id="total_num" style="color:red">2</span>件商品</div>
+                <div class="count_price">总价:&yen; <span id="total_price"  style="color:red">12679.20</span>元</div>
+                <div><button >结算</button></div>
+            </div>
+
+        </div>
+
+        <div class="total" style="display: none">亲爱的用户 <span class="user">guest</span>,您的订单信息如下:
+            共购买商品数量: <span class="goods_count"></span>,共计现金:<span class="monery_count"></span>元,祝您购物愉快
+        </div>
+    </div>
+    <!--底部-->
+    <footer>
+        <div>本项目已开始于 <span>2019</span>年 <span>12</span>月 <span>12</span>日</div>
+        <div>已启动 <span id="day"></span>天 <span id="hours"></span>时 <span id="min"></span>分 <span id="sec"></span>秒</div>
+        <div>&copy; 2019-2020xx网商城 版权:新乡学院&nbsp;计算机与信息工程学院 2019软件工程(专升本)1 20194132043 李新浩所有</div>
+    </footer>
+    <script src="js/index.js"></script>
+    <script src="js/logined.js"></script>
+    <script src="js/carList.js"></script>
+	</body>
+</html>

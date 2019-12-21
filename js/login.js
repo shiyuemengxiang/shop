@@ -8,7 +8,7 @@
  *
  */
 $(()=>{
-$('#reg').click(function(){
+$('.reg').click(function(){
     var LXH_user=$('#user').val()
     var LXH_pwd=$('#pwd').val()
     if(LXH_user!=localStorage.user){

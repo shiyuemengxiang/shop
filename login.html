@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.js"></script>
+    <script src="js/jquery.js"></script>
     <script src="js/animate.js"></script>
     <script src="js/index.js"></script>
     <script src="js/login.js"></script>
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>登录页面</title>
     <style>
-        #login{
+        .login{
             position: relative;
             /*width: 70%;*/
             height: 523px;
@@ -60,21 +60,28 @@
 </head>
 <body>
 <header id="header">
-    <div class="img"></div>
+    <!--<div class="img"></div>-->
     <ul>
-        <li><a href="index.html" > 首页 </a></li>
-        <li><a href="">栏目 2 </a></li>
-        <li><a href="">栏目 3 </a></li>
-        <li><a href="">栏目 4 </a></li>
-        <li><a href="login.html" class="cur">登录 </a></li>
-        <li><a href="register.html" >注册 </a></li>
+        <li class="cur alone"><a href=""> 首页 </a></li>
+        <li><a href="sort_male.html">男装 </a>
+            <ul>
+                <li><a href="sort_male_top.html">上衣</a></li>
+                <li><a href="sort_male_bottom.html">下衣</a></li>
+            </ul>
+        </li>
+        <li><a href="sort_female.html">女装</a>
+        </li>
+        <li><a href="hot.html">热卖榜</a></li>
+        <li><a href="about.html">关于我们</a></li>
+        <li id="login" class="alone"><a href="login.html">登录 </a></li>
+        <li id="reg" class="alone"><a href="register.html">注册 </a></li>
     </ul>
 </header>
-<div id="login">
+<div class="login">
     <div id="box">
         用&nbsp;&nbsp;户&nbsp;&nbsp;名:<input type="text" id="user" placeholder="请输入一个大于4位用户名"><br>
         密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:<input type="password" placeholder="输入大于6位密码" id="pwd"><br>
-        <button type="button" id="reg">登录</button>
+        <button type="button" class="reg">登录</button>
     </div>
 </div>
 <footer>

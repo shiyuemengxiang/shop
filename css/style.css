@@ -68,7 +68,7 @@ a:hover{
     margin-right: 20px;
     position: absolute;
     left:80px;
-    top:40px;
+    top:20px;
 
 }
 /*搜索结束*/
@@ -81,7 +81,7 @@ a:hover{
     display: flex;
     justify-content: space-around;
     height: 40px;
-    border-bottom:3px solid rgba(246, 45, 72);
+    border-bottom:3px solid rgba(246, 45, 72,1);
 }
 /*#header .img{*/
     /*width:30%;*/
@@ -242,8 +242,6 @@ footer div:last-child{
     height: inherit;
 }
 #sideBar ul li{
-
-
     width: inherit;
     height: calc(100%/4);
     text-align: center;

@@ -1,0 +1,187 @@
+*{
+	padding:0;
+	margin:0;
+	text-decoration: none;
+}
+#con{
+	width:1200px;
+    height: auto!important;
+	border:1px solid rgb(218, 0, 18);
+	padding:10px 0px;
+	margin:40px auto;
+	display: flex;
+	flex-direction: column;
+	/*position: relative;*/
+	height:480px;
+}
+#con .head{
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;
+}
+header .img{
+    margin-left: 35px;
+    margin-right: 20px;
+    position: absolute;
+    left:80px;
+    top:20px;
+}
+.head button{
+	width:65px;
+	height:45px;
+	padding: 5px 7px;
+	border-radius:15px;
+	border:1px solid rgb(230, 67, 71) ;
+	background: rgb(230, 67, 71);
+	color:#fff;
+	font-size: 16px;
+	margin-top:33px;
+	outline: none;
+	cursor:pointer
+}
+.cart-thead{
+	display: flex;
+	flex-direction:row;
+}
+.cart-thead{
+	margin: 0;
+	/*padding-left:4px;*/
+	width: 100%;
+	background:rgb(243, 243, 243);
+	/*position: absolute;*/
+	
+	height: 45px;
+	line-height: 45px;
+	color: rgb(102, 102, 102);
+	/*margin-bottom: 240px;*/
+}
+.cart-thead .column{
+    /*width:120px;*/
+	margin:0 30px;
+}
+.cart-thead .t-goods{
+	width:35%
+}
+/*单个商品*/
+.content .item{
+	display: flex;
+	flex-direction: row;
+	position: relative
+}
+.content .shop_tag{
+	padding-left: 30px;
+	border-bottom: 2px solid #ccc;
+}
+.content .shop_tag button{
+	color: #fff;
+	margin:20px 30px;
+	width: 70px;
+	font-size: 12px;
+	height: 26px;
+	outline: none;
+	border: 0;
+	background:rgb(218, 0, 18);
+	
+}
+.content .item img{
+	width:80px;
+    padding: 10px;
+	
+}
+.content .item{
+	color: #666;
+	font-size: 12px;
+}
+.content .goods_title,.price,.num,.op,.count{
+	margin-top:30px;
+	margin-right:20px ;
+	/*width:300px;*/
+	/*flex:6*/
+	
+}
+.goods_title{
+	/*width: 30%;*/
+	/*margin-right: 300px;*/
+    padding: 20px;
+	width:300px;
+	text-align: center;
+}
+.check{
+	position: relative;
+	top:30px;
+	left:10px;
+	margin: 0 20px;
+}
+.arg{
+	position: relative;
+	top:25px;
+    margin-left: 50px;
+	width: 80px;
+    line-height: 30px;
+    height: 30px;
+}
+.price,.num,.op,.count{
+	position: relative;
+	left:22px;
+	margin:30px 15px;
+	width: 80px;
+}
+.item .num{
+	display: flex;
+	flex-direction: row;
+}
+.item .num input{
+	text-align: center;
+	width:35px;
+	height:20px;
+}
+.item .num a{
+	color: #666;
+	width:20px;
+	height:20px;
+	padding: 2px;
+	text-align: center;
+	background: rgb(196, 194, 188);
+}
+.item .op a{
+	color:#666;
+	display: block;
+	font-size: 10px;
+}
+.item{
+	border-bottom: 1px solid #c8c8c8;
+}
+/*底部结算样式*/
+.settlement{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin: 10px 0;
+}
+.settlement>div{
+	line-height: 40px;
+	margin-right:20px ;
+}
+.settlement button{
+	width:65px;
+	height:45px;
+	padding: 5px 7px;
+	/*border-radius:15px;*/
+	border:1px solid rgb(230, 67, 71) ;
+	background: rgb(230, 67, 71);
+	color:#fff;
+	font-size: 16px;
+	margin-top:33px;
+	outline: none;
+	cursor:pointer;
+	position: relative;
+	top:-30px;
+	right: -10px;
+}
+.total{
+	color:#333;
+	text-align: left;
+	padding:20px 15px;
+	margin: 0 auto;
+	width: inherit;
+}

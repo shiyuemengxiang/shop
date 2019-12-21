@@ -33,12 +33,12 @@ $(()=>{
             }else{
                 $('#sideBar').fadeIn()
             }
-            if(LXH_TOP>=580&&LXH_TOP<2260){
+            if(LXH_TOP>=580&&LXH_TOP<1659){
                     $('#sideBar ul li').eq(0).css('background-color','deeppink').siblings('li').css('background-color','RGBA(98, 98, 98,0.7)')
-            }else if(LXH_TOP>=2260&&LXH_TOP<3860){
+            }else if(LXH_TOP>=1600&&LXH_TOP<3150){
                 $('#sideBar ul li').eq(1).css('background-color','rgb(102, 217, 239)').siblings('li').css('background-color','RGBA(98, 98, 98,0.7)')
 
-            }else if(LXH_TOP>=3860){
+            }else if(LXH_TOP>=3151){
                 $('#sideBar ul li').eq(2).css('background-color','rgb(133, 191, 130)').siblings('li').css('background-color','RGBA(98, 98, 98,0.7)')
             }
     //    热卖580px-2259px
