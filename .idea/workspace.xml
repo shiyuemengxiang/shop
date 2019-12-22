@@ -289,7 +289,7 @@
       <find>title</find>
       <find>num</find>
       <find>.check</find>
-      <find>.content .item img</find>
+      <find />
       <find>padding</find>
     </findStrings>
     <replaceStrings>
@@ -359,7 +359,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1939" />
