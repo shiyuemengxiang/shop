@@ -76,6 +76,7 @@
        * 此处变量用于判断地址栏参数,不便讲词汇的变量名更换姓名缩写,
        * 姓名缩写LXH_开头,如需判断,请自行望老师查阅
        * */
+       // Set-Cookie: widget_session=abc123; SameSite=None; Secure
        let url=location.href;
        let index;
        let id;
@@ -85,13 +86,25 @@
 
        }
        id=id>1?id:1//默认为1id
-       if($.cookie('carListGoods')){
-       var carListGoods=JSON.parse($.cookie('carListGoods'))
-           console.log(1)
+       //chrome下用localstorage代替cookie,本地环境chrome不支持操作session
+       if(window.navigator.userAgent.indexOf("Chrome")!=-1){
+           if(localStorage.getItem('carListGoods')){
+               var carListGoods=JSON.parse(localStorage.getItem('carListGoods'))
+               console.log(1)
+           }else{
+               console.log(2)
+               var carListGoods=[]
+           }
        }else{
-           console.log(2)
-           var carListGoods=[]
+           if($.cookie('carListGoods')){
+               var carListGoods=JSON.parse($.cookie('carListGoods'))
+               console.log(1)
+           }else{
+               console.log(2)
+               var carListGoods=[]
+           }
        }
+
        $('#add_car').click(function () {
             var num=$('#nums').val()
            carListGoods.push(
@@ -102,7 +115,15 @@
                    "price":$(".num span").html(),
                    "title":$('.title h1').html()
                })
-           $.cookie('carListGoods',JSON.stringify(carListGoods))
+           //chrome
+           if(window.navigator.userAgent.indexOf("Chrome")!=-1){
+               localStorage.setItem('carListGoods',JSON.stringify(carListGoods))
+               console.log(localStorage.getItem('carListGoods'))
+           }else{
+               $.cookie('carListGoods',JSON.stringify(carListGoods))
+               console.log($.cookie('carListGoods'))
+           }
+
            alert("商品id:"+id+",数量:"+num+"成功加入购物车")
            location.href="carList.html"
        })

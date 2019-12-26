@@ -13,7 +13,21 @@ function remove() {
 }
 
 $(function () {
-    var carListGoods = JSON.parse($.cookie('carListGoods'));
+    if(window.navigator.userAgent.indexOf("Chrome")!=-1){
+        if(localStorage.getItem('carListGoods')){
+            var carListGoods = JSON.parse(localStorage.getItem('carListGoods'));
+        }else{
+            var carListGoods =[]
+        }
+    }else{
+        if($.cookie('carListGoods')){
+            var carListGoods = JSON.parse($.cookie('carListGoods'));
+        }else{
+            var carListGoods =[]
+        }
+    }
+
+
     carListGoods.forEach(function (item, i) {
         // console.log(item)
         ele = "\t\t\t\t<div class=\"item\">\n\t\t\t\t\t<div class=\"check\">\n\t\t\t\t\t\t<input   type=\"checkbox\"checked=\"checked\"  name=\"\" id=\"\" value=\"\" />\n\t\t\t\t\t</div>\n\t\t\t\t\t<img src=\"" + item.url + "\" alt=\"\" class=\"item_img\" />\n\t\t\t\t\t<div class=\"goods_title\">" + item.title + "</div>\n\t\t\t\t\t<div class=\"arg\">\n\t\t\t\t\t\t<div>\u9ED8\u8BA4\u5C3A\u5BF8</div>\n\t\t\t\t\t\t<!--<div>512G</div>-->\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"price\">\n\t\t\t\t\t\t&yen;<span>" + item.price + "</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"num\">\n\t\t\t\t\t\t<a href=\"javascript:void(0)\"  >&nbsp;- </a><input type=\"text\" disabled=\"\" min=\"1\" style=\"width:'80px'\" value=\"" + item.num + "\" />\n\t\t\t\t\t\t<a href=\"javascript:void(0)\"  >+</a>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"count\">\n\t\t\t\t\t\t&yen;<span>" + (item.num * item.price).toFixed(2) + "</span>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"op\">\n\t\t\t\t\t\t<a href=\"javascript:void(0)\" >\u5220\u9664</a>\n\t\t\t\t\t\t<a href=\"javascript:void(0)\" onclick=\"remove()\">\u79FB\u5165\u6536\u85CF\u5939</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>"; //页面加载完毕后自动计算当前购物车数量和价格

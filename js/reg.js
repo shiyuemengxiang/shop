@@ -15,30 +15,37 @@ $('.reg').click(function(){
     var LXH_user=$('#user').val()
     var LXH_pwd=$('#pwd').val()
     var LXH_rePwd=$('#repwd').val()
-    // if(!userCheck.test(LXH_user)){
-    //     alert("用户名不合法校验不通过!")
-    //     if(!pwdCheck.test(LXH_pwd)){
-    //         alert("密码不合法校验不通过!")
-    //         if(LXH_pwd!=LXH_rePwd){
-    //             alert("两次密码请保持一致!")
-    //         }
-    //     }
-    //
-    // }
 
+    ///非chrome下才有cookie,chrome采用localstorage
+    if(window.navigator.userAgent.indexOf("Chrome")!=-1){
+        if(userCheck.test(LXH_user) && pwdCheck.test(LXH_pwd) &&LXH_pwd==LXH_rePwd ){
+            alert('注册成功,3s跳转到登录')
+            localStorage.setItem('user',LXH_user)
+            localStorage.setItem('pwd',LXH_pwd)
+            setTimeout(function(){
+                window.location="login.html"
+            },3000)
 
-    if(userCheck.test(LXH_user) && pwdCheck.test(LXH_pwd) &&LXH_pwd==LXH_rePwd ){
-        alert('注册成功,3s跳转到登录')
-        $.cookie('user',LXH_user)
-        $.cookie('pwd',LXH_pwd)
-        setTimeout(function(){
-            window.location="login.html"
-        },3000)
-
+        }else{
+            console.log(userCheck.test(LXH_user),pwdCheck.test(LXH_pwd),LXH_pwd==LXH_rePwd)
+            console.log(LXH_user,LXH_pwd,LXH_rePwd)
+            alert("用户信息输入有误注册失败")
+        }
     }else{
-        console.log(userCheck.test(LXH_user),pwdCheck.test(LXH_pwd),LXH_pwd==LXH_rePwd)
-        console.log(LXH_user,LXH_pwd,LXH_rePwd)
-        alert("用户信息输入有误注册失败")
+        if(userCheck.test(LXH_user) && pwdCheck.test(LXH_pwd) &&LXH_pwd==LXH_rePwd ){
+            alert('注册成功,3s跳转到登录')
+            $.cookie('user',LXH_user)
+            $.cookie('pwd',LXH_pwd)
+            setTimeout(function(){
+                window.location="login.html"
+            },3000)
+
+        }else{
+            console.log(userCheck.test(LXH_user),pwdCheck.test(LXH_pwd),LXH_pwd==LXH_rePwd)
+            console.log(LXH_user,LXH_pwd,LXH_rePwd)
+            alert("用户信息输入有误注册失败")
+        }
     }
+
 })
 })
