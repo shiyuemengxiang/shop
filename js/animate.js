@@ -10,17 +10,17 @@
 // js动画控制
 
 $(function(){
-    $('#header ul li').hover(function () {
-        $(this).css({'border-bottom':'5px solid red','background':'rgba(0,0,0,0.1)','color':'red'})
-        // $(this).find('ul').fadeIn()
-    },function(){
-        $(this).css({'border-bottom':'none','background':'none','color':'#444'})
-    })
-    $('#header ul>li').hover(function () {
-        $(this).find('ul').fadeIn(500)
-    },function(){
-        $(this).find('ul').fadeOut(500)
-    })
+    // $('#header ul li').hover(function () {
+    //     $(this).css({'border-bottom':'5px solid red','background':'rgba(0,0,0,0.1)','color':'red'})
+    //     // $(this).find('ul').fadeIn()
+    // },function(){
+    //     $(this).css({'border-bottom':'none','background':'none','color':'#444'})
+    // })
+    // $('#header ul>li').hover(function () {
+    //     $(this).find('ul').fadeIn(500)
+    // },function(){
+    //     $(this).find('ul').fadeOut(500)
+    // })
     $(window).scroll(function(){
         var LXH_TOP=$(window).scrollTop()
         if(LXH_TOP>200){
@@ -46,15 +46,15 @@ $(function(){
         //女装2260px-3859px
         //3860px+卫衣
     })
-    $(function(){
-        $(".content ul li").mouseover(function () {
-            $(this).css({"border":"1px solid rgb(246, 45, 72)"})
-            $(this).find("img").css("width","400px")
-        })
-        $(".content ul li").mouseout(function () {
-            $(this).css({"border":"none"})
-            $(this).find("img").css("width","350")
-        })
-
-    })
+    // $(function(){
+    //     $(".content ul li").mouseover(function () {
+    //         $(this).css({"border":"1px solid rgb(246, 45, 72)"})
+    //         $(this).find("img").css("width","400px")
+    //     })
+    //     $(".content ul li").mouseout(function () {
+    //         $(this).css({"border":"none"})
+    //         $(this).find("img").css("width","350")
+    //     })
+    //
+    // })
 })

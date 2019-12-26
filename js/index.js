@@ -62,7 +62,7 @@
         })
         //倒计时
         var LXH_djs=function(){
-            var LXH_Old_Time=new Date("2019-12-12 22:11:32")
+            var LXH_Old_Time=new Date("2019/12/12 22:11:32")
             var LXH_Old_year=LXH_Old_Time.getFullYear()
             var LXH_Old_month=LXH_Old_Time.getMonth()+1
             var LXH_Old_day=LXH_Old_Time.getDate()
