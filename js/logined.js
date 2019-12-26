@@ -7,11 +7,12 @@
  * Date: 2019/12/14 16:50
  *
  */
-$(()=>{
-    $(window).load(()=>{
-        $(()=>{
-            if(localStorage.user){
-                $('#login').html("欢迎:"+localStorage.user)
+
+$(function(){
+    $(window).load(function(){
+        $(function(){
+            if($.cookie('user')){
+                $('#login').html("欢迎:"+$.cookie('user'))
                 $('#reg').html('')
             }else{
                 $('#login').html('<a href="login.html">登录 </a>')

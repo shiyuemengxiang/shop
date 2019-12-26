@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="js/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/babel-polyfill/7.6.0/polyfill.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/logined.js"></script>
     <script src="js/index.js"></script>
     <script src="js/animate.js"></script>
     <script src="js/buy.js"></script>
     <link rel="stylesheet" href="css/detail.css">
+    <script src="js/jquery.cookie.min.js"></script>
 </head>
 <body>
 
@@ -67,7 +69,8 @@
 </footer>
 <script src="js/index.js"></script>
 <script>
-   $(()=>{
+   $(function(){
+       // sessionStorage.setItem('carListGoods',[1,2,3,4])
        /*
        *
        * 此处变量用于判断地址栏参数,不便讲词汇的变量名更换姓名缩写,
@@ -82,8 +85,8 @@
 
        }
        id=id>1?id:1//默认为1id
-       if(localStorage.carListGoods){
-       var carListGoods=JSON.parse(localStorage.carListGoods)
+       if($.cookie('carListGoods')){
+       var carListGoods=JSON.parse($.cookie('carListGoods'))
            console.log(1)
        }else{
            console.log(2)
@@ -99,7 +102,7 @@
                    "price":$(".num span").html(),
                    "title":$('.title h1').html()
                })
-           localStorage.carListGoods=JSON.stringify(carListGoods)
+           $.cookie('carListGoods',JSON.stringify(carListGoods))
            alert("商品id:"+id+",数量:"+num+"成功加入购物车")
            location.href="carList.html"
        })

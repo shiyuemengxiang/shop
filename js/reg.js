@@ -7,7 +7,7 @@
  * Date: 2019/12/14 15:31
  *
  */
-$(()=>{
+$(function(){
     var userCheck=/^[a-zA-Z_]+\w{3,16}$/g
     var pwdCheck=/^[a-zA-Z0-9_.@*/]{6,16}$/g
 $('.reg').click(function(){
@@ -29,9 +29,9 @@ $('.reg').click(function(){
 
     if(userCheck.test(LXH_user) && pwdCheck.test(LXH_pwd) &&LXH_pwd==LXH_rePwd ){
         alert('注册成功,3s跳转到登录')
-        localStorage.user=LXH_user
-        localStorage.pwd=LXH_pwd
-        setTimeout(()=>{
+        $.cookie('user',LXH_user)
+        $.cookie('pwd',LXH_pwd)
+        setTimeout(function(){
             window.location="login.html"
         },3000)
 

@@ -8,9 +8,9 @@
  *
  */
     //抓取元素
-    $(()=>{
+    $(function(){
         //轮播图
-        var LXH_banner=()=> {
+         function LXH_banner() {
             var LXH_img = $('#img1');
 //	var banner=document.getElementsByClassName('banner');
             var LXH_prev = $('#l');
@@ -30,7 +30,7 @@
             }
 
             timer = setInterval(run, 2000);
-            LXH_next.click(() => {
+            LXH_next.click(function(){
 
                 clearInterval(timer);//清空定时器
                 n++;
@@ -41,7 +41,7 @@
                 // LXH_img.src='img/images/0'+n+'.jpg';
                 timer = setInterval(run, 2000);//恢复定时器
             })
-            LXH_prev.click(() => {
+            LXH_prev.click(function(){
 
                 clearInterval(timer);
                 n--;
@@ -55,13 +55,13 @@
         }
         LXH_banner()
     //    返回top
-        $('#top').click(()=>{
+        $('#top').click(function(){
             // alert(1)
             $('body,html').animate({scrollTop:0},800)
 
         })
         //倒计时
-        var LXH_djs=()=>{
+        var LXH_djs=function(){
             var LXH_Old_Time=new Date("2019-12-12 22:11:32")
             var LXH_Old_year=LXH_Old_Time.getFullYear()
             var LXH_Old_month=LXH_Old_Time.getMonth()+1
@@ -83,7 +83,7 @@
             $('#min').text(min)
             $('#sec').text(s)
         }
-        setInterval(()=>{
+        setInterval(function(){
             LXH_djs()
         },1000)
     })

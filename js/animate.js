@@ -8,7 +8,8 @@
  *
  */
 // js动画控制
-$(()=>{
+
+$(function(){
     $('#header ul li').hover(function () {
         $(this).css({'border-bottom':'5px solid red','background':'rgba(0,0,0,0.1)','color':'red'})
         // $(this).find('ul').fadeIn()

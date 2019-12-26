@@ -7,7 +7,7 @@
  * Date: 2019/12/19 14:58
  *
  */
-$(()=>{
+$(function(){
     $(".male_contain .title div").click(function () {
         $(this).toggleClass('selected')
         $(this).siblings().removeClass('selected')
